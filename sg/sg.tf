@@ -1,5 +1,6 @@
 resource "aws_security_group" "tls" {
   name = var.sg_name
+  description = "Allow inbound traffic from port 22"
 
   dynamic "ingress" {
     iterator = port
