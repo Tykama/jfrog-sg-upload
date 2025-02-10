@@ -5,6 +5,7 @@ resource "aws_security_group" "tls" {
   dynamic "ingress" {
     iterator = port
     for_each = var.ingress
+    description = "Allow inbound traffic from port 22"
     content {
       from_port  = port.value
       to_port    = port.value
@@ -16,6 +17,7 @@ resource "aws_security_group" "tls" {
   dynamic "egress" {
     iterator = port
     for_each = var.egress
+    description = "Allow outbound traffic from all ports"
     content {
       from_port  = port.value
       to_port    = port.value
