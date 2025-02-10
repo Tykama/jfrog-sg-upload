@@ -1,4 +1,8 @@
 {
   "name": "SG-Release",
-  "version": "v1.0.0"
+  "version": "v1.0.0",
+  "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^24.2.2"
+  }
 }
